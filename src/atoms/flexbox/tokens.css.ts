@@ -1,3 +1,7 @@
+import { dimensionValues } from '../helpers.css';
+
+const gapValues = dimensionValues;
+
 const flexDirectionValues = {
   row: 'row',
   'row-reverse': 'row-reverse',
@@ -45,11 +49,60 @@ const flexWrapValues = {
   nowrap: 'nowrap',
 };
 
+const placeContentValues = {
+  center: 'center',
+  start: 'start',
+  end: 'end',
+  between: 'between',
+  around: 'around',
+  evenly: 'evenly',
+  stretch: 'stretch',
+};
+
+const placeItemsValues = {
+  start: 'start',
+  end: 'end',
+  center: 'center',
+  stretch: 'stretch',
+};
+
+const alignContentValues = {
+  center: 'center',
+  start: 'start',
+  end: 'end',
+  between: 'between',
+  around: 'around',
+  evenly: 'evenly',
+};
+
+const alignItemsValues = {
+  start: 'start',
+  end: 'end',
+  center: 'center',
+  baseline: 'baseline',
+  stretch: 'stretch',
+};
+
+const justifyContentValues = {
+  start: 'flex-start',
+  end: 'flex-end',
+  center: 'center',
+  between: 'space-between',
+  around: 'space-around',
+  evenly: 'space-evenly',
+};
+
 export const flexValues = {
+  alignContentValues,
+  alignItemsValues,
   flexDirectionValues,
   flexGrowValues,
   flexOrderValues,
   flexShrinkValues,
   flexValues: _flexValues,
   flexWrapValues,
+  gapValues,
+  justifyContentValues,
+  placeContentValues,
+  placeItemsValues,
 };

@@ -1,4 +1,5 @@
 export { backgroundAtoms, backgroundColorAtoms } from './background/atoms.css';
+export { boxAlignmentAtoms } from './box-alignment/atoms.css';
 export { flexboxAtoms } from './flexbox/atoms.css';
 export { gridAtoms } from './grid/atoms.css';
 export { layoutAtoms } from './layout/atoms.css';

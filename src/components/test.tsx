@@ -1,4 +1,5 @@
-import React, { CSSProperties } from 'react';
+// Forked from https://github.com/TheMightyPenguin/dessert-box
+import React from 'react';
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
 
 interface AtomsFnBase {
@@ -8,7 +9,7 @@ interface AtomsFnBase {
 
 export function createBox<AtomsFn extends AtomsFnBase>(
   atomsFn: AtomsFn,
-  style?: CSSProperties
+  as: keyof JSX.IntrinsicElements = 'div'
 ) {
   type BoxProps = {
     as?: keyof JSX.IntrinsicElements;
@@ -16,12 +17,7 @@ export function createBox<AtomsFn extends AtomsFnBase>(
     className?: string;
   } & Parameters<AtomsFn>[0];
 
-  function Box({
-    as: Element = 'div',
-    className,
-    children,
-    ...props
-  }: BoxProps) {
+  function Box({ as: Element = as, className, children, ...props }: BoxProps) {
     let hasAtomProps = false;
     let atomProps: Record<string, unknown> = {};
     let otherProps: Record<string, unknown> = {};
@@ -45,12 +41,14 @@ export function createBox<AtomsFn extends AtomsFnBase>(
               }`
             : undefined
         }
-        style={{ ...style, display: 'flex' }}
       >
         {children}
       </Element>
     );
   }
 
-  return Box as Polymorphic.ForwardRefComponent<'div', Omit<BoxProps, 'as'>>;
+  return Box as Polymorphic.ForwardRefComponent<
+    typeof as,
+    Omit<BoxProps, 'as'>
+  >;
 }

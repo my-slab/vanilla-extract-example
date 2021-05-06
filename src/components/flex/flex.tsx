@@ -13,6 +13,7 @@ import { createBox } from 'dessert-box';
  *  </Flex>
  */
 export let Flex = createBox(atoms);
+
 Flex.defaultProps = {
   display: 'flex',
   direction: 'col',

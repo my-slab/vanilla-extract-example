@@ -5,7 +5,7 @@ export interface LabelProps
   extends React.LabelHTMLAttributes<HTMLLabelElement> {
   /** The content to display as the label. */
   label: React.ReactNode;
-  /** Whether the label is labeling a required field or group.
+  /** Whether the label is labeling a required field.
    * @default false
    * */
   isRequired?: boolean;

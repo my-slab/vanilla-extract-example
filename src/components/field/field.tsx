@@ -5,7 +5,7 @@ import { Children } from '../../shared/types';
 import { Label } from '../label';
 import { LabelProps } from '../label/label';
 
-interface FieldProps
+export interface FieldProps
   extends Children,
     Pick<LabelProps, 'isRequired' | 'label'> {
   labelProps?: React.LabelHTMLAttributes<HTMLLabelElement>;

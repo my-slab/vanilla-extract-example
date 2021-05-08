@@ -1,6 +1,5 @@
 import { atoms } from './text.css';
-// import { createBox } from 'dessert-box';
-import { createBox } from '../test';
+import { createBox } from '../dessert-box';
 
 /**
  * Text

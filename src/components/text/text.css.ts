@@ -1,4 +1,14 @@
 import { createAtomsFn } from '@vanilla-extract/sprinkles';
-import { textAtoms, textColorAtoms } from '../../atoms/atoms.css';
+import {
+  boxAlignmentAtoms,
+  layoutAtoms,
+  textAtoms,
+  textColorAtoms,
+} from '../../atoms/atoms.css';
 
-export const atoms = createAtomsFn(textAtoms, textColorAtoms);
+export const atoms = createAtomsFn(
+  boxAlignmentAtoms,
+  layoutAtoms,
+  textAtoms,
+  textColorAtoms
+);

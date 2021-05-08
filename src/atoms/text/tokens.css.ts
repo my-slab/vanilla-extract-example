@@ -1,4 +1,4 @@
-import { colorValues } from '../helpers.css';
+import { colorValues, createScale } from '../helpers.css';
 
 const fontFamilyValues = {
   sans:
@@ -7,7 +7,22 @@ const fontFamilyValues = {
     'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
 };
 
-const fontSizeValues = {};
+const fontSizeScale = createScale(1.125, 16);
+const fontSizeValues = {
+  'font-25': fontSizeScale(-3),
+  'font-50': fontSizeScale(-2),
+  'font-75': fontSizeScale(-1),
+  'font-100': fontSizeScale(1),
+  'font-200': fontSizeScale(2),
+  'font-300': fontSizeScale(3),
+  'font-400': fontSizeScale(4),
+  'font-500': fontSizeScale(5),
+  'font-600': fontSizeScale(6),
+  'font-700': fontSizeScale(7),
+  'font-800': fontSizeScale(8),
+  'font-900': fontSizeScale(9),
+  'font-1000': fontSizeScale(10),
+};
 
 const fontStyleValues = {
   italic: 'italic',

@@ -1,3 +1,9 @@
+import colors from 'tailwindcss/colors';
+import { modularScale } from 'polished';
+
+export const createScale = (ratio: number, base: number) => (steps: number) =>
+  `${modularScale(steps, base, ratio)}px`;
+
 export const conditions = {
   responsive: {
     xsmall: {},
@@ -12,8 +18,6 @@ export const conditions = {
     dark: { '@media': '(prefers-color-scheme: dark)' },
   },
 };
-
-import colors from 'tailwindcss/colors';
 
 export const colorValues = {
   black: '#000',

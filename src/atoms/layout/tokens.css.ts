@@ -30,6 +30,33 @@ export const positionValues = {
   sticky: 'sticky',
 };
 
+export const placementValues = {
+  0: '0',
+  1: '1',
+  2: '2',
+  3: '3',
+  4: '4',
+  '-1': '-1',
+  '-2': '-2',
+  '-3': '-3',
+  '-4': '-4',
+  auto: 'auto',
+  '1/2': '50%',
+  '1/3': '33%',
+  '2/3': '66%',
+  '1/4': '25%',
+  '2/4': '50%',
+  '3/4': '75%',
+  full: '100%',
+  '-1/2': '-50%',
+  '-1/3': '-33%',
+  '-2/3': '-66%',
+  '-1/4': '-25%',
+  '-2/4': '-50%',
+  '-3/4': '-75%',
+  '-full': '-100%',
+};
+
 export const visibilityValues = {
   visible: 'visible',
   invisible: 'hidden',
@@ -49,6 +76,7 @@ export const layoutValues = {
   boxSizingValues,
   displayValues,
   overflowValues,
+  placementValues,
   positionValues,
   visibilityValues,
   zIndexValues,

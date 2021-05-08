@@ -22,5 +22,14 @@ export const layoutAtoms = createAtomicStyles({
     position: tokens.positionValues,
     visibility: tokens.visibilityValues,
     zIndex: tokens.zIndexValues,
+    top: tokens.placementValues,
+    right: tokens.placementValues,
+    left: tokens.placementValues,
+    bottom: tokens.placementValues,
+  },
+  shorthands: {
+    inset: ['top', 'left', 'right', 'bottom'],
+    insetX: ['left', 'right'],
+    insetY: ['top', 'bottom'],
   },
 });
